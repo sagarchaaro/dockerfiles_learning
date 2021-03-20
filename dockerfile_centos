@@ -1,0 +1,7 @@
+FROM centos
+MAINTAINER sagar
+RUN yum -y update
+RUN yum install -y git
+RUN yum install -y tree
+RUN yum install -y nginx
+RUN yum install -y jenkins:2.60.3

@@ -1,0 +1,7 @@
+FROM ubuntu
+MAINTAINER sagar
+RUN apt-get update
+RUN apt-get install -y openjdk-8-jdk
+ADD https://get.jenkins.io/war-stable/2.277.1/jenkins.war /
+ENTRYPOINT ["java","-jar","jenkins.war"]
+EXPOSE 8080

@@ -1,0 +1,5 @@
+FROM jenkins:2.60.3
+MAINTAINER sagar
+USER root
+RUN apt-get update
+RUN apt-get install -y git maven

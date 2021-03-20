@@ -1,0 +1,3 @@
+FROM nginx
+MAINTAINER sagar
+EXPOSE 90

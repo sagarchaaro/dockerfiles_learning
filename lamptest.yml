@@ -1,0 +1,21 @@
+---
+version: '3.8'
+services: 
+ db: 
+  image: mysql
+  environment: 
+   MYSQL_ROOT_PASSWORD: admin
+
+ apache: 
+  image: httpd 
+  ports: 
+   - 8989:80
+  links: 
+   - db:mysql
+
+ php: 
+  image: php:7.2-apache
+  links: 
+   - db:mysql
+   - apache:httpd
+...
